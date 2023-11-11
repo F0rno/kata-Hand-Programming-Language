@@ -16,6 +16,10 @@ Porque, sinceramente, ¿quién necesita estos lujos modernos de una sintaxis leg
 
 Así que, es hora de recordar de dónde vienes y abrazar la simplicidad de la máquina de Turing. ¡Que comience la Hand Programming Language Kata!
 
+## Objetivo
+
+El objetivo de esta kata es aplicar y perfeccionar las técnicas de TDD y Extreme Programming al desarrollar un compilador para un lenguaje basado en emojis.
+
 ### Funcionamiento
 
 Este lenguaje opera sobre una memoria de tamaño indefinido, compuesta por celdas que empiezan inicializadas a 0.
