@@ -39,7 +39,7 @@ Este lenguaje opera sobre una memoria de tamaño indefinido, compuesta por celda
   - Si incrementas 255 obtendrás 0
 - Se pueden anidar condicionales 🤜 y 🤛
 
-### Retos
+## Retos
 
 **Programa para imprimir "Hello"**
 
