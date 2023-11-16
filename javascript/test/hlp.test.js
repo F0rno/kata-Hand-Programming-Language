@@ -1,9 +1,10 @@
-const { renameMe } = require('../src/hpl')
+const { readMemoryAddress } = require('../src/hpl')
 const { describe, it, expect } = require('@jest/globals')
 
 describe('Hand Programing Language', function () {
-  it('change_this_name', function () {
-    const result = renameMe()
-    expect(result).toBe(true)
+  it('should return 0 when I read a new memory address', function () {
+    const memory = new Map()
+    const result = readMemoryAddress(memory, 0)
+    expect(result).toBe(0)
   })
 })
