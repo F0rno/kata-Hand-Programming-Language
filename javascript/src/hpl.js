@@ -6,4 +6,8 @@ const increaseMemoryAddress = (memory, address) => {
   return 1
 }
 
-module.exports = { readMemoryAddress, increaseMemoryAddress }
+const decreaseMemoryAddress = (memory, address) => {
+  return 0
+}
+
+module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress }

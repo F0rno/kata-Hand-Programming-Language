@@ -1,4 +1,4 @@
-const { readMemoryAddress, increaseMemoryAddress } = require('../src/hpl')
+const { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress } = require('../src/hpl')
 const { describe, it, expect } = require('@jest/globals')
 
 describe('Hand Programing Language', function () {
@@ -11,5 +11,11 @@ describe('Hand Programing Language', function () {
     const memory = new Map()
     const result = increaseMemoryAddress(memory, 0)
     expect(result).toBe(1)
+  })
+  it('should return the current value of the memory address minus 1 when we decrease the value of the memory cell if is not 0', function () {
+    const memory = new Map()
+    increaseMemoryAddress(memory, 0)
+    const result = decreaseMemoryAddress(memory, 0)
+    expect(result).toBe(0)
   })
 })
