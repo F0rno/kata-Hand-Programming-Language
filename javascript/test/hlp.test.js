@@ -12,6 +12,12 @@ describe('Hand Programing Language', function () {
     const result = increaseMemoryAddress(memory, 0)
     expect(result).toBe(1)
   })
+  it('should return 0 if we increase a memory cell with a value of 255', function () {
+    const memory = new Map()
+    memory.set(0, 255)
+    const result = increaseMemoryAddress(memory, 0)
+    expect(result).toBe(0)
+  })
   it('should return the current value of the memory address minus 1 when we decrease the value of the memory cell if is not 0', function () {
     const memory = new Map()
     increaseMemoryAddress(memory, 0)
