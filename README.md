@@ -57,6 +57,8 @@ Este lenguaje opera sobre una memoria de tamaño indefinido, compuesta por celda
 
 * [Hummm ¿qué hace esto? 😏](input.hand)
 
+# Esta kata es un fork de [hand-challenge](https://github.com/jesus-seijas-sp/hand-challenge) por [Jesús Seijas](https://github.com/jesus-seijas-sp)
+
 # Base para hacer tests
 
 Configuración básica para empezar a hacer una kata o aprender a hacer tests en los siguientes lenguajes:
