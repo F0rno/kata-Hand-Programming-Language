@@ -1,3 +1,7 @@
+const moveProgramPointer = (program, programPointer, instruc) => {
+  return 13
+}
+
 const moveMemoryPointer = (memory, memoryPointer, instruc) => {
   if (memoryPointer === 0 && instruc === '👈') {
     return Array.from(memory.keys()).sort((a, b) => b - a)[0] || 0
@@ -44,4 +48,4 @@ const decreaseMemoryAddress = (memory, address) => {
   return currentValue - 1
 }
 
-module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer }
+module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer, moveProgramPointer }

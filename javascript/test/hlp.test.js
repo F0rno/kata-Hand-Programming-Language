@@ -1,4 +1,4 @@
-const { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer } = require('../src/hpl')
+const { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer, moveProgramPointer } = require('../src/hpl')
 const { describe, it, expect } = require('@jest/globals')
 
 describe('Hand Programing Language', function () {
@@ -50,6 +50,14 @@ describe('Hand Programing Language', function () {
       const result = moveMemoryPointer(memory, memoryPointer, '👈')
       const largestMemoryAddress = Array.from(memory.keys()).sort((a, b) => b - a)[0] || 0
       expect(result).toBe(largestMemoryAddress)
+    })
+  })
+  describe('Conditionals', function () {
+    it('should change the program pointer to the position of the next 🤛 + 1 when we found a 🤜 and the current memory cell value is 0', function () {
+      const program = '👇🤜👇👇👇👇👇👇👇👉👆👈🤛👉'
+      const programPointer = 1
+      const result = moveProgramPointer(program, programPointer, '🤜')
+      expect(result).toBe(13)
     })
   })
 })
