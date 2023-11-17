@@ -2,7 +2,7 @@
 
 <p align="center">
     <img src="./imgs/Turing_Machine.png">
-</p
+</p>
 
 # Objetivo
 
