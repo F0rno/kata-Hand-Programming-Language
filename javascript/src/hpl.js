@@ -1,4 +1,7 @@
-const moveMemoryPointer = (memoryPointer, instruc) => {
+const moveMemoryPointer = (memory, memoryPointer, instruc) => {
+  if (memoryPointer === 0 && instruc === '👈') {
+    return Array.from(memory.keys()).sort((a, b) => b - a)[0] || 0
+  }
   if (instruc === '👉') {
     return memoryPointer + 1
   }

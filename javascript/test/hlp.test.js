@@ -33,14 +33,23 @@ describe('Hand Programing Language', function () {
   })
   describe('Moving the memory pointer', function () {
     it('should increase the memory pointer by 1 when we pass 👉', function () {
+      const memory = new Map()
       const memoryPointer = 0
-      const result = moveMemoryPointer(memoryPointer, '👉')
+      const result = moveMemoryPointer(memory, memoryPointer, '👉')
       expect(result).toBe(1)
     })
     it('should decrease the memory pointer when we pass 👈', function () {
+      const memory = new Map()
       const memoryPointer = 1
-      const result = moveMemoryPointer(memoryPointer, '👈')
+      const result = moveMemoryPointer(memory, memoryPointer, '👈')
       expect(result).toBe(0)
+    })
+    it('should return the the maximum known memory address when we decrease the 0 address', function () {
+      const memory = new Map()
+      const memoryPointer = 0
+      const result = moveMemoryPointer(memory, memoryPointer, '👈')
+      const largestMemoryAddress = Array.from(memory.keys()).sort((a, b) => b - a)[0] || 0
+      expect(result).toBe(largestMemoryAddress)
     })
   })
 })
