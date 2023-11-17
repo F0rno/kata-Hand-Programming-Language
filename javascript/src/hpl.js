@@ -1,5 +1,8 @@
-const moveMemoryPointer = (moveMemoryPointer, instruc) => {
-  return 1
+const moveMemoryPointer = (memoryPointer, instruc) => {
+  if (instruc === '👉') {
+    return memoryPointer + 1
+  }
+  return memoryPointer - 1
 }
 
 const readMemoryAddress = (memory, address) => {

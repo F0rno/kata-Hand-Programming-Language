@@ -37,5 +37,10 @@ describe('Hand Programing Language', function () {
       const result = moveMemoryPointer(memoryPointer, '👉')
       expect(result).toBe(1)
     })
+    it('should decrease the memory pointer when we pass 👈', function () {
+      const memoryPointer = 1
+      const result = moveMemoryPointer(memoryPointer, '👈')
+      expect(result).toBe(0)
+    })
   })
 })
