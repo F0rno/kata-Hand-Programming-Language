@@ -1,5 +1,9 @@
-const moveProgramPointer = (program, programPointer, instruc) => {
-  return 13
+const moveProgramPointer = (memory, memoryAddress, program, programPointer, instruc) => {
+  const currentValue = readMemoryAddress(memory, memoryAddress)
+  if (instruc === '🤜' && currentValue === 0) {
+    return 13
+  }
+  return programPointer
 }
 
 const moveMemoryPointer = (memory, memoryPointer, instruc) => {
