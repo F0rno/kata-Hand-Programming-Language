@@ -60,4 +60,25 @@ const decreaseMemoryAddress = (memory, address) => {
   return currentValue - 1
 }
 
-module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer, moveProgramPointer, returnASCIIValue }
+const execute = (emojis) => {
+  const program = [...emojis]
+  const memory = new Map()
+  const memoryAddress = 0
+  let textToPrint = ''
+  for (let index = 0; index < program.length; index++) {
+    const instruc = program[index]
+    switch (instruc) {
+      case '👆':
+        increaseMemoryAddress(memory, memoryAddress)
+        break
+      case '👊':
+        textToPrint += returnASCIIValue(memory, memoryAddress)
+        break
+      default:
+        break
+    }
+  }
+  return textToPrint
+}
+
+module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer, moveProgramPointer, returnASCIIValue, execute }
