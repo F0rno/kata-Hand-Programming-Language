@@ -21,7 +21,17 @@ const increaseMemoryAddress = (memory, address) => {
 }
 
 const decreaseMemoryAddress = (memory, address) => {
-  return 0
+  if (!memory.has(address)) {
+    memory.set(address, 255)
+    return 255
+  }
+  const currentValue = readMemoryAddress(memory, address)
+  if (currentValue === 0) {
+    memory.set(address, 255)
+    return 255
+  }
+  memory.set(address, currentValue - 1)
+  return currentValue - 1
 }
 
 module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress }

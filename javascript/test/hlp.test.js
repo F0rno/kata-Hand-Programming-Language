@@ -24,4 +24,9 @@ describe('Hand Programing Language', function () {
     const result = decreaseMemoryAddress(memory, 0)
     expect(result).toBe(0)
   })
+  it('should return 255 if we decrease a memory cell with value 0', function () {
+    const memory = new Map()
+    const result = decreaseMemoryAddress(memory, 0)
+    expect(result).toBe(255)
+  })
 })
