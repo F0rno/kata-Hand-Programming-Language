@@ -1,3 +1,7 @@
+const moveMemoryPointer = (moveMemoryPointer, instruc) => {
+  return 1
+}
+
 const readMemoryAddress = (memory, address) => {
   if (!memory.has(address)) {
     memory.set(address, 0)
@@ -34,4 +38,4 @@ const decreaseMemoryAddress = (memory, address) => {
   return currentValue - 1
 }
 
-module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress }
+module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer }
