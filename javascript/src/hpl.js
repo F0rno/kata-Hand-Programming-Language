@@ -1,3 +1,8 @@
+const returnASCIIValue = (memory, memoryAddress) => {
+  const asciiValue = memory.get(memoryAddress)
+  return String.fromCharCode(asciiValue)
+}
+
 const moveProgramPointer = (memory, memoryAddress, program, programPointer, instruc) => {
   const currentValue = readMemoryAddress(memory, memoryAddress)
   if (instruc === '🤛' && currentValue !== 0) {
@@ -55,4 +60,4 @@ const decreaseMemoryAddress = (memory, address) => {
   return currentValue - 1
 }
 
-module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer, moveProgramPointer }
+module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer, moveProgramPointer, returnASCIIValue }
