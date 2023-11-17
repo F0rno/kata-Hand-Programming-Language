@@ -2,21 +2,9 @@
 
 <p align="center">
     <img src="./imgs/Turing_Machine.png">
-</p>
+</p
 
-## Introducción
-
-👋 Hola!!!
-
-¡Y bienvenido a la Hand Programming Language Kata, donde los programadores pueden redescubrir la emoción de la programación primitiva! Esta kata está especialmente diseñada para esos desarrolladores que, ya sea que, están aprendiendo la nueva técnica ágile/iterativa del mes, o bien siguen aferrados al desarrollo en cascada como si les fuera la vida en ello, han olvidado la esencia misma de la programación.
-
-¿Te sientes perdido entre capas de abstracción y lenguajes de alto nivel? ¡No te preocupes! Esta kata te devolverá a tus raíces, a la época en la que cada byte se valoraba más que unos tests en un código legacy.
-
-Porque, sinceramente, ¿quién necesita estos lujos modernos de una sintaxis legible, depuradores visuales o librerías pre hechas? Aquí queremos programación en crudo, puntero para arriba, puntero para abajo, comprobar los estados y actuar en base a ellos, como sé hacia antes. Pero eso si con emojis… a ver si alguien de CSS muerde el anzuelo 🤭.
-
-Así que, es hora de recordar de dónde vienes y abrazar la simplicidad de la máquina de Turing. ¡Que comience la Hand Programming Language Kata!
-
-## Objetivo
+# Objetivo
 
 El objetivo de esta kata es aplicar y perfeccionar las técnicas de TDD y Extreme Programming al desarrollar un compilador para un lenguaje basado en emojis.
 
@@ -41,6 +29,7 @@ Este lenguaje opera sobre una memoria de tamaño indefinido, compuesta por celda
 - Las celdas de memoria son bytes, con un valor de 0 al 255
   - Si disminuyes 0 obtendrás 255
   - Si incrementas 255 obtendrás 0
+- La memoria se puede incrementar de manera “infinita”, pero si disminuyes la dirección de memoria 0, tendrás que devolver la mayor dirección de memoria conocida.
 - Se pueden anidar condicionales 🤜 y 🤛
 
 ## Retos
