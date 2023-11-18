@@ -6,10 +6,19 @@ const returnASCIIValue = (memory, memoryAddress) => {
 const moveProgramPointer = (memory, memoryAddress, program, programPointer, instruc) => {
   const currentValue = readMemoryAddress(memory, memoryAddress)
   if (instruc === '🤜' && currentValue === 0) {
-    return program.indexOf('🤛')
+    for (let index = programPointer; index < program.length; index++) {
+      if (program[index] === '🤛') {
+        console.log('return')
+        return index
+      }
+    }
   }
   if (instruc === '🤛' && currentValue !== 0) {
-    return program.indexOf('🤜')
+    for (let index = programPointer; index < program.length; index++) {
+      if (program[index] === '🤜') {
+        return index
+      }
+    }
   }
   return programPointer
 }
@@ -65,7 +74,8 @@ const execute = (emojis) => {
   const memory = new Map()
   let memoryPointer = 0
   let returnText = ''
-  for (let programPointer = 0; programPointer < program.length; programPointer++) {
+  let programPointer = 0
+  while (programPointer < program.length) {
     const instruc = program[programPointer]
     switch (instruc) {
       case '👉' || '👈':
@@ -77,7 +87,10 @@ const execute = (emojis) => {
       case '👇':
         decreaseMemoryAddress(memory, memoryPointer)
         break
-      case '🤜' || '🤛':
+      case '🤜':
+        programPointer = moveProgramPointer(memory, memoryPointer, program, programPointer, instruc)
+        break
+      case '🤛':
         programPointer = moveProgramPointer(memory, memoryPointer, program, programPointer, instruc)
         break
       case '👊':
@@ -86,6 +99,7 @@ const execute = (emojis) => {
       default:
         break
     }
+    programPointer++
   }
   return returnText
 }
