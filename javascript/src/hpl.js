@@ -8,7 +8,6 @@ const moveProgramPointer = (memory, memoryAddress, program, programPointer, inst
   if (instruc === '🤜' && currentValue === 0) {
     for (let index = programPointer; index < program.length; index++) {
       if (program[index] === '🤛') {
-        console.log('return')
         return index
       }
     }
