@@ -53,32 +53,32 @@ describe('Hand Programing Language', function () {
     })
   })
   describe('Conditionals', function () {
-    it('should change the program pointer to the position of the next 🤛 + 1 when we found a 🤜 and the current memory cell value is 0', function () {
+    it('should change the program pointer to the position of the next 🤛 when we found a 🤜 and the current memory cell value is 0', function () {
       const memory = new Map()
-      const program = '👇🤜👇👇👇👇👇👇👇👉👆👈🤛👉'
+      const program = [...'👇🤜👇👇👇👇👇👇👇👉👆👈🤛👉']
       const programPointer = 1
       const result = moveProgramPointer(memory, 0, program, programPointer, '🤜')
-      expect(result).toBe(13)
+      expect(result).toBe(12)
     })
-    it('should not change the program pointer to the position of the next 🤛 + 1 when we found a 🤜 and the current memory cell value is not 0', function () {
+    it('should not change the program pointer to the position of the next 🤛 when we found a 🤜 and the current memory cell value is not 0', function () {
       const memory = new Map()
       increaseMemoryAddress(memory, 0)
-      const program = '👇🤜👇👇👇👇👇👇👇👉👆👈🤛👉'
+      const program = [...'👇🤜👇👇👇👇👇👇👇👉👆👈🤛👉']
       const programPointer = 1
       const result = moveProgramPointer(memory, 0, program, programPointer, '🤜')
       expect(result).toBe(1)
     })
-    it('should change the program pointer to the position of the next 🤜 + 1 when we found a 🤛 and the current memory cell value is not 0', function () {
+    it('should change the program pointer to the position of the next 🤜 when we found a 🤛 and the current memory cell value is not 0', function () {
       const memory = new Map()
       increaseMemoryAddress(memory, 0)
-      const program = '👇🤛👇👇👇👇👇👇👇👉👆👈🤜👉'
+      const program = [...'👇🤛👇👇👇👇👇👇👇👉👆👈🤜👉']
       const programPointer = 1
       const result = moveProgramPointer(memory, 0, program, programPointer, '🤛')
-      expect(result).toBe(13)
+      expect(result).toBe(12)
     })
-    it('should not change the program pointer to the position of the next 🤜 + 1 when we found a 🤛 and the current memory cell value is 0', function () {
+    it('should not change the program pointer to the position of the next 🤜 when we found a 🤛 and the current memory cell value is 0', function () {
       const memory = new Map()
-      const program = '👇🤛👇👇👇👇👇👇👇👉👆👈🤜👉'
+      const program = [...'👇🤛👇👇👇👇👇👇👇👉👆👈🤜👉']
       const programPointer = 1
       const result = moveProgramPointer(memory, 0, program, programPointer, '🤛')
       expect(result).toBe(programPointer)
@@ -102,6 +102,11 @@ describe('Hand Programing Language', function () {
       const program = '👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👊'
       const result = execute(program)
       expect(result).toBe('B')
+    })
+    it('should return Hellow when we pass 👇🤜👇👇👇👇👇👇👇👉👆👈🤛👉👇👊👇🤜👇👉👆👆👆👆👆👈🤛👉👆👆👊👆👆👆👆👆👆👆👊👊👆👆👆👊', function () {
+      const program = '👇🤜👇👇👇👇👇👇👇👉👆👈🤛👉👇👊👇🤜👇👉👆👆👆👆👆👈🤛👉👆👆👊👆👆👆👆👆👆👆👊👊👆👆👆👊'
+      const result = execute(program)
+      expect(result).toBe('Hellow')
     })
   })
 })

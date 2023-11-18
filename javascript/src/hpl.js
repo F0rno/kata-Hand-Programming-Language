@@ -5,11 +5,11 @@ const returnASCIIValue = (memory, memoryAddress) => {
 
 const moveProgramPointer = (memory, memoryAddress, program, programPointer, instruc) => {
   const currentValue = readMemoryAddress(memory, memoryAddress)
-  if (instruc === '🤛' && currentValue !== 0) {
-    return 13
-  }
   if (instruc === '🤜' && currentValue === 0) {
-    return 13
+    return program.indexOf('🤛')
+  }
+  if (instruc === '🤛' && currentValue !== 0) {
+    return program.indexOf('🤜')
   }
   return programPointer
 }
@@ -63,22 +63,31 @@ const decreaseMemoryAddress = (memory, address) => {
 const execute = (emojis) => {
   const program = [...emojis]
   const memory = new Map()
-  const memoryAddress = 0
-  let textToPrint = ''
-  for (let index = 0; index < program.length; index++) {
-    const instruc = program[index]
+  let memoryPointer = 0
+  let returnText = ''
+  for (let programPointer = 0; programPointer < program.length; programPointer++) {
+    const instruc = program[programPointer]
     switch (instruc) {
+      case '👉' || '👈':
+        memoryPointer = moveMemoryPointer(memory, memoryPointer, instruc)
+        break
       case '👆':
-        increaseMemoryAddress(memory, memoryAddress)
+        increaseMemoryAddress(memory, memoryPointer)
+        break
+      case '👇':
+        decreaseMemoryAddress(memory, memoryPointer)
+        break
+      case '🤜' || '🤛':
+        programPointer = moveProgramPointer(memory, memoryPointer, program, programPointer, instruc)
         break
       case '👊':
-        textToPrint += returnASCIIValue(memory, memoryAddress)
+        returnText += returnASCIIValue(memory, memoryPointer)
         break
       default:
         break
     }
   }
-  return textToPrint
+  return returnText
 }
 
 module.exports = { readMemoryAddress, increaseMemoryAddress, decreaseMemoryAddress, moveMemoryPointer, moveProgramPointer, returnASCIIValue, execute }
