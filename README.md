@@ -37,15 +37,15 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 ## Retos
 
-#### **Leer posiciones de memoria**
+#### **1. Leer posiciones de memoria**
 
 * Implementa la función `readMemoryAddress` para acceder a los valores de la memoria en una posición dada
 
-#### **Incrementa el valor de una posición de memoria**
+#### **2. Incrementa el valor de una posición de memoria**
 
 * Implementa la función `increaseMemoryAddress` para incrementar el valor de la celda de memoria actual
 
-#### **Decrementa el valor de una posición de memoria**
+#### **3. Decrementa el valor de una posición de memoria**
 
 * Implementa la función `decreaseMemoryAddress` para disminuir el valor de la celda de memoria actual
 
