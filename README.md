@@ -28,7 +28,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 * Dado que en esta kata se prioriza practicar el desarrollo del software y que el reto planteado puede abordarse de diferentes maneras. Se establecen estas restricciones:
   * El paradigma de programación es procedimental (solo funciones, nada de [OO](https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos))
-  * Se parte de unas funciones ya incorporadas, que hay que implementar usando TDD
+  * Por cada reto se establece la función que hay que implementar usando TDD, pero la nomenclatura (**Camel Case**) de la función y el uso de los parámetros que trae, son a gusto personal
 
 - Las celdas de memoria son bytes, con un valor de 0 al 255
   - Si disminuyes 0 obtendrás 255
@@ -71,10 +71,10 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 * Implementa la función `execute(emojis)`
 * 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👊👉👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👊👉👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👊👉👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👊
 
-#### **9. Condicionales**
+#### **9. Condicionales (`🤜` y `🤛`)**
 
-* Implementa la función `jumpIfZero(memory, memoryAddress, program, programPointer)` para la instruccion de salto condicional `🤜`
-* Implementa la función `jumpIfNotZero(memory, memoryAddress, program, programPointer)` para la instruccion de salto condicional `🤛`
+* Implementa la función `jumpIfZero(memory, memoryAddress, program, programPointer)`, cuando te encuentres un `🤜` salta al `🤛` correspondiente, si el valor de la celda de memoria actual 0
+* Implementa la función `jumpIfNotZero(memory, memoryAddress, program, programPointer)`, cuando te encuentres un `🤛` salta al `🤜` correspondiente, si el valor de la celda de memoria actual es diferente a 0
 
 #### **10. Ejecuta el siguiente programa para obtener "Hola, Turing"**
 
