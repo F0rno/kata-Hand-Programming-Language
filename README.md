@@ -20,7 +20,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 * 🤜 si la celda de memoria en la posición actual tiene valor 0, salta justo después del 🤛 correspondiente
 * 🤛 si la celda de memoria en la posición actual no tiene valor 0, salta justo después de la 🤜 correspondiente
 
-#### [⚠️](https://emojiterra.com/es/senal-de-advertencia/) Aclaraciones [⚠️](https://emojiterra.com/es/senal-de-advertencia/)
+#### [⚠️](https://emojiterra.com/es/senal-de-advertencia/) *Aclaraciones* [⚠️](https://emojiterra.com/es/senal-de-advertencia/)
 
 * Dado que en esta kata se prioriza practicar el desarrollo del software y que el reto planteado puede abordarse de diferentes maneras. Se establecen estas restricciones:
   * El paradigma de programación es procedimental (solo funciones, nada de [OO](https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos))
