@@ -28,7 +28,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 * Dado que en esta kata se prioriza practicar el desarrollo del software y que el reto planteado puede abordarse de diferentes maneras. Se establecen estas restricciones:
   * El paradigma de programación es procedimental (solo funciones, nada de [OO](https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos))
-  * Por cada reto se establece la función que hay que implementar usando TDD, pero la nomenclatura (**Camel Case**) de la función y el uso de los parámetros que trae, son a gusto personal
+  * Por cada reto se establece la función que hay que implementar usando TDD, pero la nomenclatura (**Camel Case**) de la función y el uso de los parámetros que trae (dejarlos o quitarlos), son a gusto personal
 
 - Las celdas de memoria son bytes, con un valor de 0 al 255
   - Si disminuyes 0 obtendrás 255
