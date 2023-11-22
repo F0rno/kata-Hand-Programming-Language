@@ -39,7 +39,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 #### **1. Leer posiciones de memoria**
 
-* Implementa la función `readMemoryAddress(memory, memoryAddress)` para acceder a los valores de la memoria en una posición dada
+* Implementa la función `readMemoryAddress(memory, memoryAddress)` para acceder a al valor de una posición de memoria
 
 #### **2. Incrementa el valor de una posición de memoria `👆`**
 
@@ -59,7 +59,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 #### 6. Muestra el carácter ASCII `👊`
 
-* Implementa la función `returnASCIIValue(memory, memoryAddress)` y devuelve el carácter ASCII correspondiente al valor de la celda de memoria actual
+* Implementa la función `returnASCIIValue(memory, memoryAddress)` para que devuelva el carácter ASCII correspondiente al valor de la celda de memoria actual
 
 #### **7. Ejecuta el siguiente programa para obtener "A"**
 
