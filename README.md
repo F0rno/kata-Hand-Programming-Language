@@ -20,10 +20,6 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 * 🤜 si la celda de memoria en la posición actual tiene valor 0, salta justo después del 🤛 correspondiente
 * 🤛 si la celda de memoria en la posición actual no tiene valor 0, salta justo después de la 🤜 correspondiente
 
-<p align="center">
-    <img src="./imgs/tabla_ASCII.png">
-</p>
-
 #### [⚠️](https://emojiterra.com/es/senal-de-advertencia/) Aclaraciones [⚠️](https://emojiterra.com/es/senal-de-advertencia/)
 
 * Dado que en esta kata se prioriza practicar el desarrollo del software y que el reto planteado puede abordarse de diferentes maneras. Se establecen estas restricciones:
@@ -39,7 +35,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 #### **1. Leer posiciones de memoria**
 
-* Implementa la función `readMemoryAddress(memory, memoryAddress)` para acceder a al valor de una posición de memoria
+* Implementa la función `readMemoryAddress(memory, memoryAddress)` para leer el valor de una posición de memoria
 
 #### **2. Incrementa el valor de una posición de memoria `👆`**
 
@@ -60,6 +56,10 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 #### 6. Muestra el carácter ASCII `👊`
 
 * Implementa la función `returnASCIIValue(memory, memoryAddress)` para que devuelva el carácter ASCII correspondiente al valor de la celda de memoria actual
+
+<p align="center">
+    <img src="./imgs/tabla_ASCII.png">
+</p>
 
 #### **7. Ejecuta el siguiente programa para obtener "A"**
 
