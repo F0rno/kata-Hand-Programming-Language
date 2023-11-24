@@ -44,7 +44,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 #### **3. Decrementa el valor de una posición de memoria `👇`**
 
 * Disminuye una celda con valor 0 a 255
-* Disminuye una celda con valor 1 a 2
+* Disminuye una celda con valor 2 a 1
 
 #### **4. Incrementa el puntero de memoria `👉`**
 
