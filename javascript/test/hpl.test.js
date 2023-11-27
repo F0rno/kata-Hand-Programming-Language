@@ -1,5 +1,5 @@
 const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress } = require('../src/hpl')
-const { describe, it, expect } = require('@jest/globals')
+const { describe, it, expect, beforeAll } = require('@jest/globals')
 
 describe('Hand Programming Language', function () {
   describe('Move memory pointer', function () {
@@ -16,6 +16,11 @@ describe('Hand Programming Language', function () {
       })
     })
     describe('Decrease', function () {
+      let memory
+      beforeAll(() => {
+        memory = new Map()
+        memory.set(0, 0)
+      })
       it.each`
         position | steps | expected
         ${3}     | ${1}  | ${2}
@@ -26,14 +31,18 @@ describe('Hand Programming Language', function () {
         expect(result).toBe(expected)
       })
       it('should pass from position 0 to the highest known position', function () {
-        const memory = new Map()
-        let position = 1
+        let position = 0
         position = decreaseMemoryPointer(position, 1, memory)
         expect(position).toBe(0)
       })
     })
   })
   describe('Read memory addresses', function () {
+    let memory
+    beforeAll(() => {
+      memory = new Map()
+      memory.set(0, 0)
+    })
     it('should read 0 when we read the 0 address', function () {
       const result = readMemoryAddress()
       expect(result).toBe(0)
@@ -42,6 +51,10 @@ describe('Hand Programming Language', function () {
       const address = increaseMemoryPointer()
       const result = readMemoryAddress(address)
       expect(result).toBe(0)
+    })
+    it('should read 0 when we read the memory value behind to the 0 address', function () {
+      const address = decreaseMemoryPointer(0, 1, memory)
+      expect(address).toBe(0)
     })
   })
 })
