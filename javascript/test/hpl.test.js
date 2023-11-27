@@ -24,9 +24,13 @@ describe('Hand Programming Language', function () {
     */
       it('should pass from position 3 to 2', function () {
         let position = 3
-        const steps = 1
         position = decreaseMemoryPointer()
         expect(position).toBe(2)
+      })
+      it('should pass from position 2 to 1', function () {
+        let position = 2
+        position = decreaseMemoryPointer(position)
+        expect(position).toBe(1)
       })
     })
   })
