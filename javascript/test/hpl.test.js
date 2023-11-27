@@ -32,6 +32,11 @@ describe('Hand Programming Language', function () {
         position = decreaseMemoryPointer(position)
         expect(position).toBe(1)
       })
+      it('should pass from position 1 to 0', function () {
+        let position = 1
+        position = decreaseMemoryPointer(position)
+        expect(position).toBe(0)
+      })
     })
   })
 })

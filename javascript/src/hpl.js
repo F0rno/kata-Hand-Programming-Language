@@ -3,6 +3,9 @@ const increaseMemoryPointer = (memoryPosition = 0, steps = 1) => {
 }
 
 const decreaseMemoryPointer = (memoryPosition = 0) => {
+  if (memoryPosition === 1) {
+    return 0
+  }
   if (memoryPosition === 2) {
     return 1
   }
