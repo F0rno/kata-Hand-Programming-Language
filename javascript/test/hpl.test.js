@@ -34,8 +34,13 @@ describe('Hand Programming Language', function () {
     })
   })
   describe('Read memory addresses', function () {
-    it('Read the memory value at position 0', function () {
+    it('should read 0 when we read the 0 address', function () {
       const result = readMemoryAddress()
+      expect(result).toBe(0)
+    })
+    it('should read 0 when we read the memory value next to the 0 address', function () {
+      const address = increaseMemoryPointer()
+      const result = readMemoryAddress(address)
       expect(result).toBe(0)
     })
   })

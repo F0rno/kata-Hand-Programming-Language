@@ -9,7 +9,7 @@ const decreaseMemoryPointer = (memoryPosition = 0, steps = 1, memory) => {
   return memoryPosition - steps
 }
 
-const readMemoryAddress = () => {
+const readMemoryAddress = (memoryAddress = 0) => {
   return 0
 }
 
