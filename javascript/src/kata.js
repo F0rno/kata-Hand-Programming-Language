@@ -1,5 +1,5 @@
-const renameMe = () => {
-    return true;
+const readMemoryAddresse = () => {
+    return 0;
 };
 
-module.exports = {renameMe};
+module.exports = {readMemoryAddresse};

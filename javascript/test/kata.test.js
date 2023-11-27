@@ -1,8 +1,10 @@
-const { renameMe } = require('../src/kata');
+const { readMemoryAddresse } = require('../src/kata');
 
-describe("Kata", function () {
-  it("change_this_name", function () {
-   var result = renameMe();
-      expect(result).toBe(true);
-  });
+describe("Hand Programming Language", function () {
+  describe('Read memory addresses', function() {
+    it("should read 0 when we read the initial addresse", function () {
+      var result = readMemoryAddresse();
+      expect(result).toBe(0);
+     });
+  })
 });
