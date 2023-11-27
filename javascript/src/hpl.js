@@ -1,8 +1,5 @@
-const increaseMemoryPointer = (steps) => {
-  if (steps === 2) {
-    return 2
-  }
-  return 1
+const increaseMemoryPointer = (memoryPosition = 0, steps = 1) => {
+  return memoryPosition + steps
 }
 
 module.exports = { increaseMemoryPointer }
