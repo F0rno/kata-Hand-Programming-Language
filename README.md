@@ -53,7 +53,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 * Lee el valor de memoria en la posición 0 y obtén 1
 * Lee el valor de memoria en la posición 1 y obtén 2
 * Lee el valor de memoria en la posición 2 y obtén 3
-* Lee el valor de memoria en la posición 0 - 1 y obtén 3
+* Lee el valor de la mayor posición de memoria conocida y obtén 3
 
 #### **4. Incrementa el valor de posiciones en memoria `👆`**
 
