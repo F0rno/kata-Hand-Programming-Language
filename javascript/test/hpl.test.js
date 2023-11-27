@@ -41,7 +41,9 @@ describe('Hand Programming Language', function () {
     let memory
     beforeAll(() => {
       memory = new Map()
-      memory.set(0, 0)
+      memory.set(0, 1)
+      memory.set(1, 2)
+      memory.set(2, 3)
     })
     it('should read 0 when we read the 0 address', function () {
       const result = readMemoryAddress()
