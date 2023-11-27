@@ -16,26 +16,14 @@ describe('Hand Programming Language', function () {
       })
     })
     describe('Decrease', function () {
-    /*
-        Pasa de la posición 3 de memoria, a la 2
-        Pasa de la posición 2 de memoria, a la 1
-        Pasa de la posición 1 de memoria, a la 0
-        Pasa de la posición 0 de memoria, a la mayor posición conocida
-    */
-      it('should pass from position 3 to 2', function () {
-        let position = 3
-        position = decreaseMemoryPointer(position)
-        expect(position).toBe(2)
-      })
-      it('should pass from position 2 to 1', function () {
-        let position = 2
-        position = decreaseMemoryPointer(position)
-        expect(position).toBe(1)
-      })
-      it('should pass from position 1 to 0', function () {
-        let position = 1
-        position = decreaseMemoryPointer(position)
-        expect(position).toBe(0)
+      it.each`
+        position | steps | expected
+        ${3}     | ${1}  | ${2}
+        ${2}     | ${1}  | ${1}
+        ${1}     | ${1}  | ${0}
+        `('should pass from position $position to $expected', ({ position, steps, expected }) => {
+        const result = decreaseMemoryPointer(position, steps)
+        expect(result).toBe(expected)
       })
       it('should pass from position 0 to the highest known position', function () {
         const memory = new Map()
