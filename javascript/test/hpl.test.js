@@ -24,7 +24,7 @@ describe('Hand Programming Language', function () {
     */
       it('should pass from position 3 to 2', function () {
         let position = 3
-        position = decreaseMemoryPointer()
+        position = decreaseMemoryPointer(position)
         expect(position).toBe(2)
       })
       it('should pass from position 2 to 1', function () {
@@ -35,6 +35,12 @@ describe('Hand Programming Language', function () {
       it('should pass from position 1 to 0', function () {
         let position = 1
         position = decreaseMemoryPointer(position)
+        expect(position).toBe(0)
+      })
+      it('should pass from position 0 to the highest known position', function () {
+        const memory = new Map()
+        let position = 1
+        position = decreaseMemoryPointer(position, 1, memory)
         expect(position).toBe(0)
       })
     })
