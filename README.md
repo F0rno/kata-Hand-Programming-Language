@@ -46,10 +46,14 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 #### **3. Leer posiciones de memoria**
 
-* Lee el valor de memoria en la posición 0
-* Lee el valor de memoria siguiente a la posición 0
-* Lee el valor de memoria anterior a la posición 0
-* Lee el valor de memoria siguiente a la posición 1
+* Establece las siguientes direcciones de memoria a estos valores:
+  * 0 = 1
+  * 1 = 2
+  * 2 = 3
+* Lee el valor de memoria en la posición 0 y obtén 1
+* Lee el valor de memoria en la posición 1 y obtén 2
+* Lee el valor de memoria en la posición 2 y obtén 3
+* Lee el valor de memoria en la posición 0 - 1 y obtén 3
 
 #### **4. Incrementa el valor de posiciones en memoria `👆`**
 
