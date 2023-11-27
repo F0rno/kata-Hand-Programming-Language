@@ -1,5 +1,5 @@
-const readMemoryAddresse = () => {
-  return 0
+const increaseMemoryPointer = () => {
+  return 1
 }
 
-module.exports = { readMemoryAddresse }
+module.exports = { increaseMemoryPointer }
