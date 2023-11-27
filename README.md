@@ -12,10 +12,10 @@ El objetivo de esta kata es aplicar y perfeccionar las técnicas de TDD y Extrem
 
 Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas que empiezan inicializadas a 0
 
-* 👆 incrementa el valor de la celda de memoria actual
-* 👇 disminuye el valor de la celda de memoria actual
 * 👉 mueve el puntero de memoria a la siguiente celda
 * 👈 mueve el puntero de memoria a la celda anterior
+* 👆 incrementa el valor de la celda de memoria actual
+* 👇 disminuye el valor de la celda de memoria actual
 * 👊 muestra el valor de la celda actual según su equivalencia en ASCII
 * 🤜 si la celda de memoria en la posición actual tiene valor 0, salta justo después del 🤛 correspondiente
 * 🤛 si la celda de memoria en la posición actual no tiene valor 0, salta justo después de la 🤜 correspondiente
@@ -30,31 +30,40 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 ## Retos
 
-#### **1. Leer posiciones de memoria**
-
-* Lee el valor de memoria en la posición inicial
-* Lee el valor de memoria siguiente a la posición inicial
-* Lee el valor de memoria anterior a la posición inicial
-
-#### **2. Incrementa el valor de posiciones en memoria `👆`**
-
-* Incrementa una celda con valor 0 a 1
-* Incrementa una celda con valor 255 a 0
-
-#### **3. Decrementa el valor de una posición de memoria `👇`**
-
-* Disminuye una celda con valor 0 a 255
-* Disminuye una celda con valor 2 a 1
-
-#### **4. Incrementa el puntero de memoria `👉`**
+#### **1. Incrementa el puntero de memoria `👉`**
 
 * Pasa de la posición 0 de memoria, a la 1
+* Pasa de la posición 1 de memoria, a la 2
 * Pasa de la posición 255 de memoria, a la 256
+* Pasa de la posición 256 de memoria, a la 257
 
-#### **5. Decrementa el puntero de memoria `👈`**
+#### **2. Decrementa el puntero de memoria `👈`**
 
-* Pasa de la posición 0 de memoria, a la mayor posición conocida
+* Pasa de la posición 3 de memoria, a la 2
+* Pasa de la posición 2 de memoria, a la 1
 * Pasa de la posición 1 de memoria, a la 0
+* Pasa de la posición 0 de memoria, a la mayor posición conocida
+
+#### **3. Leer posiciones de memoria**
+
+* Lee el valor de memoria en la posición 0
+* Lee el valor de memoria siguiente a la posición 0
+* Lee el valor de memoria anterior a la posición 0
+* Lee el valor de memoria siguiente a la posición 1
+
+#### **4. Incrementa el valor de posiciones en memoria `👆`**
+
+* Incrementa una celda con valor 0 a 1
+* Incrementa una celda con valor 1 a 2
+* Incrementa una celda con valor 2 a 3
+* Incrementa una celda con valor 255 a 0
+
+#### **5. Decrementa el valor de una posición de memoria `👇`**
+
+* Disminuye una celda con valor 3 a 2
+* Disminuye una celda con valor 2 a 1
+* Disminuye una celda con valor 1 a 0
+* Disminuye una celda con valor 0 a 255
 
 #### 6. Muestra el carácter ASCII `👊`
 
