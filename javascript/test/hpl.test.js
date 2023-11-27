@@ -1,4 +1,4 @@
-const { increaseMemoryPointer, decreaseMemoryPointer } = require('../src/hpl')
+const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress } = require('../src/hpl')
 const { describe, it, expect } = require('@jest/globals')
 
 describe('Hand Programming Language', function () {
@@ -31,6 +31,12 @@ describe('Hand Programming Language', function () {
         position = decreaseMemoryPointer(position, 1, memory)
         expect(position).toBe(0)
       })
+    })
+  })
+  describe('Read memory addresses', function () {
+    it('Read the memory value at position 0', function () {
+      const result = readMemoryAddress()
+      expect(result).toBe(0)
     })
   })
 })

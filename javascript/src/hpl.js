@@ -9,4 +9,8 @@ const decreaseMemoryPointer = (memoryPosition = 0, steps = 1, memory) => {
   return memoryPosition - steps
 }
 
-module.exports = { increaseMemoryPointer, decreaseMemoryPointer }
+const readMemoryAddress = () => {
+  return 0
+}
+
+module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress }
