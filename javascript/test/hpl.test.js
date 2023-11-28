@@ -96,19 +96,16 @@ describe('Hand Programming Language', function () {
     beforeAll(() => {
       memory = new Map()
     })
-    it('should write 1 in the address 0', function () {
-      const address = 0
-      const value = 1
+    it.each`
+    value   | address | expected
+    ${1}    | ${0}    | ${1}
+    ${2}    | ${1}    | ${2}
+    ${3}    | ${2}    | ${3}
+    ${4}    | ${3}    | ${4}
+    `('should write $value in the address &address', ({ address, value, expected }) => {
       writeMemoryAddress(address, value, memory)
       const result = readMemoryAddress(address, memory)
-      expect(result).toBe(1)
-    })
-    it('should write 2 in the address 1', function () {
-      const address = 1
-      const value = 2
-      writeMemoryAddress(address, value, memory)
-      const result = readMemoryAddress(address, memory)
-      expect(result).toBe(2)
+      expect(result).toBe(expected)
     })
   })
 })
