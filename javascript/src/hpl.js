@@ -10,6 +10,10 @@ const decreaseMemoryPointer = (memoryPosition = 0, steps = 1, memory) => {
 }
 
 const readMemoryAddress = (memoryAddress = 0, memory) => {
+  if (!memory.has(memoryAddress)) {
+    memory.set(memoryAddress, 0)
+    return 0
+  }
   return memory.get(memoryAddress)
 }
 

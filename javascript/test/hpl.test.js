@@ -60,5 +60,10 @@ describe('Hand Programming Language', function () {
       const result = readMemoryAddress(address, memory)
       expect(result).toBe(3)
     })
+    it('should read 0 when we read the memory value of address 3', function () {
+      const address = 3
+      const result = readMemoryAddress(address, memory)
+      expect(result).toBe(0)
+    })
   })
 })
