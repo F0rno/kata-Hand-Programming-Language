@@ -31,6 +31,9 @@ const decreasesCellValue = (value = 0) => {
   if (value === 2) {
     return 1
   }
+  if (value === 0) {
+    return 255
+  }
   return 0
 }
 
