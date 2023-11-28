@@ -17,4 +17,8 @@ const readMemoryAddress = (memoryAddress = 0, memory) => {
   return memory.get(memoryAddress)
 }
 
-module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress }
+const increasesCellValue = () => {
+  return 1
+}
+
+module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue }
