@@ -80,8 +80,14 @@ describe('Hand Programming Language', function () {
     })
     describe('Decrement values', function () {
       it('should decrease a cell with 3 to 2', function () {
-        const result = decreasesCellValue()
+        const value = 3
+        const result = decreasesCellValue(value)
         expect(result).toBe(2)
+      })
+      it('should decrease a cell with 2 to 1', function () {
+        const value = 2
+        const result = decreasesCellValue(value)
+        expect(result).toBe(1)
       })
     })
   })
