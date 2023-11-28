@@ -24,6 +24,9 @@ const increasesCellValue = (value = 0) => {
   if (value === 2) {
     return 3
   }
+  if (value === 255) {
+    return 0
+  }
   return 1
 }
 
