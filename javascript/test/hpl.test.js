@@ -67,24 +67,15 @@ describe('Hand Programming Language', function () {
   })
   describe('Modify memory values', function () {
     describe('Increase values', function () {
-      it('should increase a cell with value 0 to 1', function () {
-        const result = increasesCellValue()
-        expect(result).toBe(1)
-      })
-      it('should increase a cell with value 1 to 2', function () {
-        const value = 1
+      it.each`
+      value   | expected
+      ${0}    | ${1}
+      ${1}    | ${2}
+      ${2}    | ${3}
+      ${255}  | ${0}
+      `('should increase a cell with $value 255 to $expected', ({ value, expected }) => {
         const result = increasesCellValue(value)
-        expect(result).toBe(2)
-      })
-      it('should increase a cell with value 2 to 3', function () {
-        const value = 2
-        const result = increasesCellValue(value)
-        expect(result).toBe(3)
-      })
-      it('should increase a cell with value 255 to 0', function () {
-        const value = 255
-        const result = increasesCellValue(value)
-        expect(result).toBe(0)
+        expect(result).toBe(expected)
       })
     })
   })
