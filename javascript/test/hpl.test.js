@@ -79,25 +79,15 @@ describe('Hand Programming Language', function () {
       })
     })
     describe('Decrement values', function () {
-      it('should decrease a cell with 3 to 2', function () {
-        const value = 3
+      it.each`
+      value   | expected
+      ${3}    | ${2}
+      ${2}    | ${1}
+      ${1}    | ${0}
+      ${0}    | ${255}
+      `('should decrease a cell with $value to $expected', ({ value, expected }) => {
         const result = decreasesCellValue(value)
-        expect(result).toBe(2)
-      })
-      it('should decrease a cell with 2 to 1', function () {
-        const value = 2
-        const result = decreasesCellValue(value)
-        expect(result).toBe(1)
-      })
-      it('should decrease a cell with 1 to 0', function () {
-        const value = 1
-        const result = decreasesCellValue(value)
-        expect(result).toBe(0)
-      })
-      it('should decrease a cell with 0 to 255', function () {
-        const value = 0
-        const result = decreasesCellValue(value)
-        expect(result).toBe(255)
+        expect(result).toBe(expected)
       })
     })
   })
