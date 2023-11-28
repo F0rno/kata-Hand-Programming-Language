@@ -89,6 +89,11 @@ describe('Hand Programming Language', function () {
         const result = decreasesCellValue(value)
         expect(result).toBe(1)
       })
+      it('should decrease a cell with 1 to 0', function () {
+        const value = 1
+        const result = decreasesCellValue(value)
+        expect(result).toBe(0)
+      })
     })
   })
 })

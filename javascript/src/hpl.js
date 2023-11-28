@@ -31,7 +31,7 @@ const decreasesCellValue = (value = 0) => {
   if (value === 2) {
     return 1
   }
-  return 2
+  return 0
 }
 
 module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue }
