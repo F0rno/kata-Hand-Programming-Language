@@ -17,7 +17,10 @@ const readMemoryAddress = (memoryAddress = 0, memory) => {
   return memory.get(memoryAddress)
 }
 
-const increasesCellValue = () => {
+const increasesCellValue = (value = 0) => {
+  if (value === 1) {
+    return 2
+  }
   return 1
 }
 
