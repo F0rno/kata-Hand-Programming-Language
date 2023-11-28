@@ -103,5 +103,12 @@ describe('Hand Programming Language', function () {
       const result = readMemoryAddress(address, memory)
       expect(result).toBe(1)
     })
+    it('should write 2 in the address 1', function () {
+      const address = 1
+      const value = 2
+      writeMemoryAddress(address, value, memory)
+      const result = readMemoryAddress(address, memory)
+      expect(result).toBe(2)
+    })
   })
 })
