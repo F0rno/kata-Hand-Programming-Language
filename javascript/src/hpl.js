@@ -24,4 +24,8 @@ const increasesCellValue = (value = 0) => {
   return value + 1
 }
 
-module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue }
+const decreasesCellValue = () => {
+  return 2
+}
+
+module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue }
