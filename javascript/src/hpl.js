@@ -18,16 +18,10 @@ const readMemoryAddress = (memoryAddress = 0, memory) => {
 }
 
 const increasesCellValue = (value = 0) => {
-  if (value === 1) {
-    return 2
-  }
-  if (value === 2) {
-    return 3
-  }
   if (value === 255) {
     return 0
   }
-  return 1
+  return value + 1
 }
 
 module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue }
