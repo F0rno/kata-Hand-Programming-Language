@@ -31,4 +31,9 @@ const decreasesCellValue = (value = 0) => {
   return value - 1
 }
 
-module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue }
+const writeMemoryAddress = (address, value, memory) => {
+  memory.set(address, value)
+  return memory.get(address)
+}
+
+module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress }

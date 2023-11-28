@@ -1,4 +1,4 @@
-const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue } = require('../src/hpl')
+const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress } = require('../src/hpl')
 const { describe, it, expect, beforeAll } = require('@jest/globals')
 
 describe('Hand Programming Language', function () {
@@ -89,6 +89,19 @@ describe('Hand Programming Language', function () {
         const result = decreasesCellValue(value)
         expect(result).toBe(expected)
       })
+    })
+  })
+  describe('Write to memory addresses', function () {
+    let memory
+    beforeAll(() => {
+      memory = new Map()
+    })
+    it('should write 1 in the address 0', function () {
+      const address = 0
+      const value = 1
+      writeMemoryAddress(address, value, memory)
+      const result = readMemoryAddress(address, memory)
+      expect(result).toBe(1)
     })
   })
 })
