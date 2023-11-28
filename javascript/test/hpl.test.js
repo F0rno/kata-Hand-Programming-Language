@@ -45,18 +45,19 @@ describe('Hand Programming Language', function () {
       memory.set(1, 2)
       memory.set(2, 3)
     })
-    it('should read 0 when we read the 0 address', function () {
+    it('should read 1 when we read the 0 address', function () {
       const result = readMemoryAddress()
-      expect(result).toBe(0)
+      expect(result).toBe(1)
     })
-    it('should read 0 when we read the memory value next to the 0 address', function () {
+    it('should read 2 when we read the memory value next to the 0 address, address 1', function () {
       const address = increaseMemoryPointer()
       const result = readMemoryAddress(address)
-      expect(result).toBe(0)
+      expect(result).toBe(2)
     })
-    it('should read 0 when we read the memory value behind to the 0 address', function () {
+    it('should read 3 when we read the memory value behind to the 0 address, the highest known position', function () {
       const address = decreaseMemoryPointer(0, 1, memory)
-      expect(address).toBe(0)
+      const result = readMemoryAddress(address)
+      expect(result).toBe(3)
     })
   })
 })
