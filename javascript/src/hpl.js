@@ -50,6 +50,46 @@ const execute = (emojis) => {
   if (emojis === '👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👊👉👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👊👉👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👊👉👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👊') {
     return 'Hola'
   }
+
+  const program = [...emojis]
+  let programPointer = 0
+  const memory = new Map()
+  let memoryPointer = 0
+  let output = ''
+
+  while (programPointer <= program.length) {
+    const instruction = program[programPointer]
+    let currentValue
+    let newValue
+    switch (instruction) {
+      case '👉':
+        memoryPointer = increaseMemoryPointer(memoryPointer)
+        break
+      case '👈':
+        memoryPointer = decreaseMemoryPointer(memoryPointer, 1, memory)
+        break
+      case '👆':
+        currentValue = readMemoryAddress(memoryPointer, memory)
+        newValue = increasesCellValue(currentValue)
+        writeMemoryAddress(memoryPointer, newValue, memory)
+        break
+      case '👇':
+        currentValue = readMemoryAddress(memoryPointer, memory)
+        newValue = decreasesCellValue(currentValue)
+        writeMemoryAddress(memoryPointer, newValue, memory)
+        break
+      case '👊':
+        currentValue = readMemoryAddress(memoryPointer, memory)
+        output += toASCIICharacter(currentValue)
+        break
+      default:
+        break
+    }
+    programPointer++
+  }
+
+  return output
+
   return 'A'
 }
 
