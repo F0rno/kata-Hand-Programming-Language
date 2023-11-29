@@ -88,6 +88,7 @@ const jumpIfZero = (program, programPointer, currentValue) => {
       return index
     }
   }
+  return programPointer
 }
 
 module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute, jumpIfZero }
