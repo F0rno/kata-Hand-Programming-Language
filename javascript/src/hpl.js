@@ -97,7 +97,13 @@ const jumpIfZero = (program, programPointer, currentValue) => {
 
 const jumpIfNotZero = (program, programPointer, currentValue) => {
   if (currentValue === 0) { return programPointer }
-  return 3
+  for (let index = programPointer; index < program.length; index++) {
+    const instruction = program[index]
+    if (instruction === '🤜') {
+      return index
+    }
+  }
+  return programPointer
 }
 
 module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute, jumpIfZero, jumpIfNotZero }

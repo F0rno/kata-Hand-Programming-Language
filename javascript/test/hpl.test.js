@@ -165,6 +165,13 @@ describe('Hand Programming Language', function () {
         const result = jumpIfNotZero(program, programPointer, currentValue)
         expect(result).toBe(3)
       })
+      it('should return the current program pointer when we pass 🤛👆🤜', function () {
+        const program = [...'🤛👆🤜']
+        const programPointer = 0
+        const currentValue = 0
+        const result = jumpIfNotZero(program, programPointer, currentValue)
+        expect(result).toBe(0)
+      })
     })
   })
 })
