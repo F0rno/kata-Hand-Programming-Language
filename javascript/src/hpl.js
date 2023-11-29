@@ -95,4 +95,9 @@ const jumpIfZero = (program, programPointer, currentValue) => {
   return programPointer
 }
 
-module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute, jumpIfZero }
+const jumpIfNotZero = (program, programPointer, currentValue) => {
+  if (currentValue === 0) { return programPointer }
+  return 3
+}
+
+module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute, jumpIfZero, jumpIfNotZero }

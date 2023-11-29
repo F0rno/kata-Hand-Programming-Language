@@ -1,4 +1,4 @@
-const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute, jumpIfZero } = require('../src/hpl')
+const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute, jumpIfZero, jumpIfNotZero } = require('../src/hpl')
 const { describe, it, expect, beforeAll } = require('@jest/globals')
 
 describe('Hand Programming Language', function () {
@@ -155,6 +155,15 @@ describe('Hand Programming Language', function () {
       `('should return $expected when we pass $emojis', ({ expected, emojis }) => {
         const result = execute(emojis)
         expect(result).toBe(expected)
+      })
+    })
+    describe('Jump if current memory cell value is not 0 🤛 🤜', function () {
+      it('should return the index of the next 🤜 when we pass 👆🤛👆🤜', function () {
+        const program = [...'👆🤛👆🤜']
+        const programPointer = 1
+        const currentValue = 1
+        const result = jumpIfNotZero(program, programPointer, currentValue)
+        expect(result).toBe(3)
       })
     })
   })
