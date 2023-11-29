@@ -72,6 +72,10 @@ const execute = (emojis) => {
         currentValue = readMemoryAddress(memoryPointer, memory)
         output += toASCIICharacter(currentValue)
         break
+      case '🤜':
+        currentValue = readMemoryAddress(memoryPointer, memory)
+        programPointer = jumpIfZero(program, programPointer, currentValue)
+        break
       default:
         break
     }
