@@ -1,4 +1,4 @@
-const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter } = require('../src/hpl')
+const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute } = require('../src/hpl')
 const { describe, it, expect, beforeAll } = require('@jest/globals')
 
 describe('Hand Programming Language', function () {
@@ -118,6 +118,12 @@ describe('Hand Programming Language', function () {
     `('should return "$expected" when the value of the memory cell is $value', ({ value, expected }) => {
       const result = toASCIICharacter(value)
       expect(result).toBe(expected)
+    })
+  })
+  describe('Executing programs', function () {
+    it('should return "A" when we execute 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👊', function () {
+      const result = execute()
+      expect(result).toBe('A')
     })
   })
 })

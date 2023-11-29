@@ -40,4 +40,8 @@ const toASCIICharacter = (value) => {
   return String.fromCharCode(value)
 }
 
-module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter }
+const execute = () => {
+  return 'A'
+}
+
+module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute }
