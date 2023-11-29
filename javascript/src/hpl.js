@@ -37,16 +37,7 @@ const writeMemoryAddress = (address, value, memory) => {
 }
 
 const toASCIICharacter = (value) => {
-  if (value === 66) {
-    return 'B'
-  }
-  if (value === 67) {
-    return 'C'
-  }
-  if (value === 68) {
-    return 'D'
-  }
-  return 'A'
+  return String.fromCharCode(value)
 }
 
 module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter }

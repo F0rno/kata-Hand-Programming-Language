@@ -109,25 +109,15 @@ describe('Hand Programming Language', function () {
     })
   })
   describe('Get ASCII characters', function () {
-    it('should return "A" when the value of the memory cell is 65', function () {
-      const value = 65
+    it.each`
+    value | expected
+    ${65}  | ${'A'}
+    ${66}  | ${'B'}
+    ${67}  | ${'C'}
+    ${68}  | ${'D'}
+    `('should return "$expected" when the value of the memory cell is $value', ({ value, expected }) => {
       const result = toASCIICharacter(value)
-      expect(result).toBe('A')
-    })
-    it('should return "B" when the value of the memory cell is 66', function () {
-      const value = 66
-      const result = toASCIICharacter(value)
-      expect(result).toBe('B')
-    })
-    it('should return "C" when the value of the memory cell is 67', function () {
-      const value = 67
-      const result = toASCIICharacter(value)
-      expect(result).toBe('C')
-    })
-    it('should return "D" when the value of the memory cell is 68', function () {
-      const value = 68
-      const result = toASCIICharacter(value)
-      expect(result).toBe('D')
+      expect(result).toBe(expected)
     })
   })
 })
