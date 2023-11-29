@@ -42,7 +42,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 * Pasa de la posición 3 de memoria, a la 2
 * Pasa de la posición 2 de memoria, a la 1
 * Pasa de la posición 1 de memoria, a la 0
-  `A partir de aquí deberías tener en cuenta implementar la estructura de datos que actuara como memoria`
+`A partir de aquí deberías tener en cuenta implementar la estructura de datos que actuara como memoria`
 * Pasa de la posición 0 de memoria, a la mayor posición conocida
 
 #### **3. Leer posiciones de memoria**
