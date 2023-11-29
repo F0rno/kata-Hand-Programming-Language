@@ -104,7 +104,7 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 #### **9. Condicionales (`🤜` y `🤛`)**
 
-* Cuando te encuentres un `🤜` haz que el puntero de ejecución del programa salte al `🤛` correspondiente, si el valor de la celda de memoria actual 0
+* Cuando te encuentres un `🤜` haz que el puntero de ejecución del programa salte al `🤛` correspondiente, si el valor de la celda de memoria actual es 0
   * A
     * 🤜👆🤛        👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👊
   * B
