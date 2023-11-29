@@ -6,7 +6,7 @@
 
 # Objetivo
 
-El objetivo de esta kata es aplicar y perfeccionar las técnicas de TDD y Extreme Programming al desarrollar un compilador para un lenguaje basado en emojis
+El objetivo de esta kata es aplicar y perfeccionar las técnicas de TDD y Extreme Programming al desarrollar un interprete para un lenguaje basado en emojis
 
 ### Funcionamiento
 
