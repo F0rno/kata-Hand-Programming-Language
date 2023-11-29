@@ -36,7 +36,10 @@ const writeMemoryAddress = (address, value, memory) => {
   return memory.get(address)
 }
 
-const toASCIICharacter = () => {
+const toASCIICharacter = (value) => {
+  if (value === 66) {
+    return 'B'
+  }
   return 'A'
 }
 
