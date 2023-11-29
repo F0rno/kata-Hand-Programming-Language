@@ -80,8 +80,14 @@ const execute = (emojis) => {
   return output
 }
 
-const jumpIfZero = () => {
-  return 2
+const jumpIfZero = (program, programPointer, currentValue) => {
+  if (currentValue !== 0) { return programPointer }
+  for (let index = programPointer; index < program.length; index++) {
+    const instruction = program[index]
+    if (instruction === '🤛') {
+      return index
+    }
+  }
 }
 
 module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter, execute, jumpIfZero }

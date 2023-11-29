@@ -135,8 +135,18 @@ describe('Hand Programming Language', function () {
   describe('Conditionals', function () {
     describe('Jump if current memory cell value is 0 🤜 🤛', function () {
       it('should return the index of the next 🤛 when we pass 🤜👆🤛', function () {
-        const result = jumpIfZero()
+        const program = [...'🤜👆🤛']
+        const programPointer = 0
+        const currentValue = 0
+        const result = jumpIfZero(program, programPointer, currentValue)
         expect(result).toBe(2)
+      })
+      it('should return the current program pointer when we pass 👆🤜👆🤛', function () {
+        const program = [...'👆🤜👆🤛']
+        const programPointer = 1
+        const currentValue = 1
+        const result = jumpIfZero(program, programPointer, currentValue)
+        expect(result).toBe(1)
       })
     })
   })
