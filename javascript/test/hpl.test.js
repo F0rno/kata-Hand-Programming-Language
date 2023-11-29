@@ -124,5 +124,10 @@ describe('Hand Programming Language', function () {
       const result = toASCIICharacter(value)
       expect(result).toBe('C')
     })
+    it('should return "D" when the value of the memory cell is 68', function () {
+      const value = 68
+      const result = toASCIICharacter(value)
+      expect(result).toBe('D')
+    })
   })
 })

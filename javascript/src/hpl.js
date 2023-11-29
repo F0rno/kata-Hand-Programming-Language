@@ -43,6 +43,9 @@ const toASCIICharacter = (value) => {
   if (value === 67) {
     return 'C'
   }
+  if (value === 68) {
+    return 'D'
+  }
   return 'A'
 }
 
