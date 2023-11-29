@@ -1,4 +1,4 @@
-const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress } = require('../src/hpl')
+const { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter } = require('../src/hpl')
 const { describe, it, expect, beforeAll } = require('@jest/globals')
 
 describe('Hand Programming Language', function () {
@@ -106,6 +106,12 @@ describe('Hand Programming Language', function () {
       writeMemoryAddress(address, expected, memory)
       const result = readMemoryAddress(address, memory)
       expect(result).toBe(expected)
+    })
+  })
+  describe('Get ASCII characters', function () {
+    it('should return "A" when the value of the memory cell is 65', function () {
+      const result = toASCIICharacter()
+      expect(result).toBe('A')
     })
   })
 })

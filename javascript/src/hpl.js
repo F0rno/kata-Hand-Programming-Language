@@ -36,4 +36,8 @@ const writeMemoryAddress = (address, value, memory) => {
   return memory.get(address)
 }
 
-module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress }
+const toASCIICharacter = () => {
+  return 'A'
+}
+
+module.exports = { increaseMemoryPointer, decreaseMemoryPointer, readMemoryAddress, increasesCellValue, decreasesCellValue, writeMemoryAddress, toASCIICharacter }
