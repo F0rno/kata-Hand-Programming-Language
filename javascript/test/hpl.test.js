@@ -97,13 +97,13 @@ describe('Hand Programming Language', function () {
       memory = new Map()
     })
     it.each`
-    value   | address | expected
-    ${1}    | ${0}    | ${1}
-    ${2}    | ${1}    | ${2}
-    ${3}    | ${2}    | ${3}
-    ${4}    | ${3}    | ${4}
-    `('should write $value in the address &address', ({ address, value, expected }) => {
-      writeMemoryAddress(address, value, memory)
+    address | expected
+    ${0}    | ${1}
+    ${1}    | ${2}
+    ${2}    | ${3}
+    ${3}    | ${4}
+    `('should write $expected in the address $address', ({ address, expected }) => {
+      writeMemoryAddress(address, expected, memory)
       const result = readMemoryAddress(address, memory)
       expect(result).toBe(expected)
     })
