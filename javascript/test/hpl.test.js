@@ -110,7 +110,7 @@ describe('Hand Programming Language', function () {
   })
   describe('Get ASCII characters', function () {
     it.each`
-    value | expected
+    value  | expected
     ${65}  | ${'A'}
     ${66}  | ${'B'}
     ${67}  | ${'C'}
