@@ -129,7 +129,6 @@ Este lenguaje modifica una memoria de tamaño indefinido, compuesta por celdas q
 
 * **Esta kata es un fork de [hand-challenge](https://github.com/jesus-seijas-sp/hand-challenge) por [Jesús Seijas](https://github.com/jesus-seijas-sp)**
 * **Agradecimientos a [Emmanuel Valverde Ramos](https://github.com/khru) por el feedback**
-* **Creada por mi, [F0rno](https://github.com/F0rno)**
 
 # Base para hacer tests
 
